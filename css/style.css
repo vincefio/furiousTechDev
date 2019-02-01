@@ -43,29 +43,34 @@ body {
   background-color: #ffd8a5; }
 
 .headerWrap {
-  height: 90vh;
   font-family: "Quicksand", sans-serif;
   display: grid;
-  grid-template-rows: 1fr 3fr 1fr; }
+  grid-template-rows: 1fr 2.5fr 1fr; }
 
 #workLink {
   font-family: "Quicksand", sans-serif;
-  height: 85px;
-  line-height: 78px;
+  height: 65px;
+  line-height: 60px;
   font-size: 1.4em;
   border-radius: 2em;
-  width: 300px;
+  width: 220px;
   background-color: #ffb34e;
   color: white;
   border: 2px solid #ffac3f;
   display: block;
   margin: 0 auto;
   bottom: 10px; }
+  @media (min-width: 600px) {
+    #workLink {
+      height: 85px;
+      line-height: 78px;
+      width: 300px; } }
 
 #workLink:hover {
   background-color: #d87b00; }
 
 #catchPhrase {
+  font-size: 2rem;
   text-align: center;
   color: #656363;
   font-weight: 700px; }
@@ -109,12 +114,13 @@ body {
 
 #profilePic {
   max-width: 80%;
-  margin: 27px auto;
+  margin: 10px auto;
   display: block;
   border-radius: 12em; }
   @media (min-width: 600px) {
     #profilePic {
-      max-width: 55%; } }
+      max-width: 55%;
+      margin: 27px auto; } }
   @media (min-width: 900px) {
     #profilePic {
       border-radius: 3em; } }
@@ -235,25 +241,32 @@ body {
 .portfolioSingleProjectWrap {
   position: relative;
   display: grid;
-  background-color: #333; }
+  background-color: #333;
+  max-height: 500px; }
 
 .portfolioProjectDescription {
   text-align: center;
   position: absolute;
-  margin-top: 18%;
+  margin-top: 5%;
   padding: 15px;
   color: white;
   font-size: 1.2em; }
   @media (min-width: 600px) {
     .portfolioProjectDescription {
       position: static;
-      font-size: 3em; } }
+      font-size: 3em;
+      margin-top: 18%; } }
   @media (min-width: 900px) {
     .portfolioProjectDescription {
       font-size: 2em; } }
 
-.portfolioImg {
-  min-height: 100% !important; }
+#stockImg {
+  width: 100%;
+  max-height: 100%; }
+
+#hangman {
+  width: 100%;
+  max-height: 100%; }
 
 .portfolioProjectDescription div {
   margin-bottom: 35px; }
@@ -265,7 +278,7 @@ body {
   color: white;
   font-size: 3em;
   left: 27%;
-  margin-top: 27%;
+  margin-top: 11%;
   text-align: center;
   position: absolute; }
   @media (min-width: 600px) {
@@ -276,6 +289,9 @@ body {
   @media (min-width: 900px) {
     .projectTitle {
       margin-left: 7%; } }
+
+#stockTip {
+  left: 22%; }
 
 .displayNone {
   display: none; }
@@ -295,7 +311,12 @@ body {
   left: 0; }
 
 #studyImg {
+  width: 100% !important;
   opacity: .8; }
+
+#stockImg {
+  width: 100%;
+  max-height: 100%; }
 
 /***********CONTACT*************/
 /*******************************/

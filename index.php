@@ -50,9 +50,7 @@
             <li>
                 <a href="#contact">Contact</a>
             </li>
-            <li>
-                <a href="https://www.youtube.com/channel/UCsKGZmtL3KjZ8rosNhXu0QA" target="_blank">Youtube</a>
-            </li>
+
         </ul>
 </header>
 
@@ -108,7 +106,7 @@
                         <img class="techIcon" src="./img/robot.svg" alt="">
                     </div>
                     <div class="iconTextWrap firstTwoWrap">
-                            <h4>Responsive</h4>
+                            <h4>Mobile</h4>
                             <p>My apps function across all devices
                             </p>
                     </div>
@@ -143,8 +141,8 @@
         <div class="projectWrap bodyDiv">
             <h2 id="projects" class="designHeader sectionHeader projectHeader">Projects</h2>
             <div class="projectWrapDiv">
-                <div id="portfolioProject1" class="portfolioSingleProjectWrap">
-                    <img id="profImg" class='responsive-img portfolioImg' src="./img/stocks.jpg" alt="stockChart">
+                <div id="portfolioProject1" class="portfolioSingleProjectWrap portfolioProjectFirst2">
+                    <img id="stockImg" class='responsive-img portfolioImg' src="./img/stocks2.jpeg" alt="stockChart">
                     <div id="stockTip" class="projectTitle">StockTip</div>
                     
                     <div class="portfolioProjectDescription displayNone">
@@ -154,32 +152,32 @@
                         </a>
                     </div>
                 </div>
-                <div id="portfolioProject2" class="portfolioSingleProjectWrap">
+                <div id="portfolioProject2" class="portfolioSingleProjectWrap portfolioProjectFirst2">
                     <img id="studyImg" src="./img/study.jpeg" alt="Mountains" class="portfolioImg responsive-img">
                     <div id="studyProjectTitle" class="projectTitle">Flashcard Study Tool</div>
                     <div class="portfolioProjectDescription displayNone">
-                        <div class="hvrbox-text">React tool to assist with studying</div>
+                        <div class="hvrbox-text">Study Assistant tool which allows users to input questions they wish to study</div>
                         <a href="https://powerful-wildwood-55898.herokuapp.com/" target="_blank" class="visitWebsite">Visit
                             Website
                         </a>
                     </div>
                 </div>
-                <div id="portfolioProject3" class="portfolioSingleProjectWrap">
-                    <img src="./img/hungryPerson.jpg" alt="Mountains" class="portfolioImg responsive-img">
+                <div id="portfolioProject3" class="portfolioSingleProjectWrap portfolioProjectSecond2">
+                    <img id="hungryPerson" src="./img/hungryPerson.jpg" alt="Mountains" class="portfolioImg responsive-img">
                     <div id="fridgeProjectTitle" class="projectTitle">Whats In Your Fridge?</div>
                     <div class="portfolioProjectDescription displayNone">
                         <div class="hvrbox-text">Find delicious recipes using only the ingredients you already have</div>
-                        <a href="https://sheltered-harbor-86409.herokuapp.com/" target="_blank" class="visitWebsite">Visit
+                        <a href="https://vincefio.github.io/whatsinyourfridge/" target="_blank" class="visitWebsite">Visit
                             Website
                         </a>
                     </div>
                 </div>
-                <div id="portfolioProject4" class="portfolioSingleProjectWrap">
-                    <img src="./img/hangman.png" alt="Mountains" class="portfolioImg responsive-img">
+                <div id="portfolioProject4" class="portfolioSingleProjectWrap portfolioProjectSecond2">
+                    <!-- <img id="hangman" src="./img/hangman.jpg" alt="Mountains" class="portfolioImg responsive-img"> -->
                     <div id="fridgeProjectTitle" class="projectTitle">Rock N Roll Hangman</div>
                     <div class="portfolioProjectDescription displayNone">
                         <div class="hvrbox-text">Can your music knowledge save you before it's too late?</div>
-                        <a href="https://sheltered-harbor-86409.herokuapp.com/" target="_blank" class="visitWebsite">Visit
+                        <a href="https://rocknrollhangman.herokuapp.com/home.html" target="_blank" class="visitWebsite">Visit
                             Website
                         </a>
                     </div>
@@ -213,7 +211,7 @@
                             <label for="textarea1">Message</label>
                         </div>
                     </div>
-
+                    <span class="helper-text" data-error="Error Sending" data-success="Sent"></span>
                     <a id="workLink" class="waves-effect waves-light btn-large">Lets Make It Happen</a>
                 </form>
             </div>
