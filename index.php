@@ -1,3 +1,48 @@
+<?php
+    //message vars
+    $msg = '';
+    $msgClass = '';
+    //check for submit
+    if(filter_has_var(INPUT_POST, 'submit')){
+        //echo 'submitted';
+        //Get Form Data
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+
+        //Check required fields
+        if(!empty($email) && !empty($name) && !empty($message)){
+            //passed
+            //Check Email
+            if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
+                //failed
+            }else{
+                //passed
+                $toEmail = 'vince@furioustechdev.com';
+                $subject = 'Contact Request From '.$name;
+                $body = '<h2>Furious Tech Contact Request</h2>
+                <h4>Name</h4><p>'.$name.'</p>
+                <h4>Email</h4><p>'.$email.'</p>
+                <h4>Message</h4><p>'.$message.'</p>
+                ';
+
+               if(mail($toEmail, $subject, $body)){
+                    //email sent
+                    $msg = 'Email sent!';
+                    $msgClass= 'green';
+                } else{
+                    //failed
+                    $msg = 'Email was not sent';
+                    $msgClass = 'red';
+                }
+            }
+        }else{
+            //failed
+            $msg = 'Please fill in all fields';
+            $msgClass = 'red';
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -190,29 +235,32 @@
         </div> -->
         <div id="contact" class="contactWrap bodyDiv">
             <h2 id="contactHeader" class="designHeader sectionHeader projectHeader">Contact</h2>
-            <div class="row container">
-                <form class="col s12 m10 l11 ">
+            <div class="row container" >
+                <?php if($msg != ''): ?>
+                    <div style="margin-bottom: 15px;" class="<?php echo $msgClass ?>"><?php echo $msg ?></div>
+                <?php endif; ?>
+                <form class="col s12 m10 l11" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <div class="row">
                         <div class="input-field col s12">
-                            <input placeholder="" id="first_name" type="text" class="validate">
+                            <input name="name" placeholder="" id="first_name" type="text" class="validate">
                             <label for="first_name">First Name</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <input id="email" type="email" class="validate">
+                            <input name="email" id="email" type="email" class="validate">
                             <label for="email">Email</label>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea name="message" id="textarea1" class="materialize-textarea"></textarea>
                             <label for="textarea1">Message</label>
                         </div>
                     </div>
                     <span class="helper-text" data-error="Error Sending" data-success="Sent"></span>
-                    <a id="workLink" class="waves-effect waves-light btn-large">Lets Make It Happen</a>
+                    <button name="submit" id="workLink" class="waves-effect waves-light btn-large">Lets Make It Happen</button>
                 </form>
             </div>
 
